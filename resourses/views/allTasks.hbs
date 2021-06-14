@@ -1,0 +1,36 @@
+
+{{> header }}
+{{> navbar }}
+<section>
+    <table class="table container my-4">
+        <thead>
+            <tr>
+            <th scope="col">id</th>
+            <th scope="col">name</th>
+            <th scope="col">content</th>
+            <th scope="col">Status</th>
+            <th scope="col">Handle</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each data}}
+                <tr>
+                    <th scope="row">{{@index}}</th>
+                    <td>{{this.name}}</td>
+                    <td>{{this.content}}</td>
+                    <th scope="col">{{this.status}}</th>
+                    <td><button> <a href="/editTask/{{@index}}">Edit</a> </button> <button> <a href="/deleteTask/{{@index}}">delete</a> </button> <button><a href="/singleTask/{{@index}}">Show</a></button> <button> <a href="/changeStatus/{{@index}}">Change Status</a> </button></td>
+                </tr>
+            {{/each}}
+
+            
+        </tbody>
+        </table>
+</section>
+
+{{!-- {{#each data}}
+{{this.name}}
+{{this.content}}
+{{/each}}
+
+{{>footer}} --}}

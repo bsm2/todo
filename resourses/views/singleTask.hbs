@@ -1,0 +1,24 @@
+
+{{> header }}
+{{> navbar }}
+    <section>
+    <table class="table container my-4">
+        <thead>
+            <tr>
+                <th scope="col">id</th>
+                <th scope="col">name</th>
+                <th scope="col">content</th>
+                <th scope="col">Handle</th>
+            </tr>
+        </thead>
+        <tbody>
+                <tr> 
+                    <th scope="row">{{id}}</th>
+                    <td>{{data.name}}</td>
+                    <td>{{data.content}}</td>
+                    <td><button>Edit</button> <button>delete</button> <button>Change Status</button></td>
+                </tr>  
+        </tbody>
+        </table>
+</section>
+{{>footer}}

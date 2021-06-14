@@ -1,0 +1,32 @@
+{{> header }}
+{{> navbar }}
+    <section class="container my-3">
+        <form class="row g-3">
+            <div class="col-md-12">
+                <label for="inputEmail4" class="form-label" >name</label>
+                <input type="text" class="form-control" id="inputEmail4" name="name" value="{{data.name}}">
+            </div>
+            <div class="col-md-12">
+                <label for="inputPassword4" class="form-label">content</label>
+                <input type="text" class="form-control" id="inputPassword4" name="content" value={{data.content}}>
+            </div>
+            <div>
+                <select class="form-select" aria-label="Default select example" name="status">
+                    {{#if data.status}}
+                    <option  value="false">false</option>
+                    <option selected value="true">true</option>
+                    {{else}}
+                    <option selected value="false">false</option>
+                    <option  value="true">true</option>
+                    {{/if}}
+                    
+                </select>
+            </div>
+            
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary">Edit</button>
+            </div>
+            
+        </form>
+    </section>
+{{>footer}}
